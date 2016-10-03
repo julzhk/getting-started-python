@@ -1,7 +1,15 @@
 box: python:2.7-slim
+# in this dev clause we define the steps we want to take when developing.
 dev:
   steps:
+    # first we want to run pip-install to install all the dependencies
     - pip-install
+    # then we want to run a wercker step that watches your files and reloads
+    # when changes are detected.
+    - script:
+        name: python unit test
+        code: |
+          python app_test.py
     - internal/watch:
         code: python app.py
         reload: true
