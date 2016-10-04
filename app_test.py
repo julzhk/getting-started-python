@@ -4,7 +4,9 @@ import unittest
 import json
 
 class CitiesTestCase(unittest.TestCase):
-
+"""
+  Create a container with /cities.json as an endpoint
+"""
   def test_index(self):
     tester = app.test_client(self)
     response = tester.get('/cities.json', content_type='application/json')
