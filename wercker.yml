@@ -29,12 +29,13 @@ build:
           python app_test.py
 
 deploy:
-  box: python:2.7-slim
   dockerhub:
   - pip-install
   - internal/docker-push:
-      username: $DOCKER_USER
-      password: $DOCKER_PASS
+      username: $USERNAME
+      password: $PASSWORD
+      tag: my-tag
+      registry: https://registry.hub.docker.com
       repository: wercker-getting-started-python
       cmd: "python app_test.py"
       ports: 5001
