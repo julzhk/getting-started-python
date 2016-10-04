@@ -29,13 +29,14 @@ build:
           python app_test.py
 
 deploy:
-  dockerhub:
-  - pip-install
-  - internal/docker-push:
-      username: $USERNAME
-      password: $PASSWORD
-      tag: my-tag
-      registry: https://registry.hub.docker.com
-      repository: julzharley/wercker-getting-started-python
-      cmd: "python app_test.py"
-      ports: 5001
+  steps:
+    - internal/docker-push:
+        username: $USERNAME
+        password: $PASSWORD
+        tag: my-amazing-tag
+        cmd: my-amazing-command
+        ports: "5000"
+        repository: julzharley/wercker-getting-started-python
+        registry: https://registry.hub.docker.com
+        cmd: "python app_test.py"
+        ports: 5001
