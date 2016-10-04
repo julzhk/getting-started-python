@@ -26,7 +26,3 @@ build:
         name: python unit test
         code: |
           python app_test.py
-          
-deploy:
-  # nothing here
-
