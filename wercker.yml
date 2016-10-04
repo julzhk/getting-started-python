@@ -37,4 +37,4 @@ deploy:
         ports: "5000"
         repository: julzharley/wercker-getting-started-python
         registry: https://registry.hub.docker.com
-        cmd: "python app_test.py"
+        cmd: "python app.py"
