@@ -35,6 +35,6 @@ deploy:
   - internal/docker-push:
       username: $DOCKER_USER
       password: $DOCKER_PASS
-      repository: julzhk/getting-started-python
+      repository: wercker-getting-started-python
       cmd: "python app_test.py"
       ports: 5001
