@@ -36,6 +36,6 @@ deploy:
       password: $PASSWORD
       tag: my-tag
       registry: https://registry.hub.docker.com
-      repository: wercker-getting-started-python
+      repository: julzharley/wercker-getting-started-python
       cmd: "python app_test.py"
       ports: 5001
