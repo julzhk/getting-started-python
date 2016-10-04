@@ -28,12 +28,5 @@ build:
           python app_test.py
           
 deploy:
-  box: python:2.7-slim
-  dockerhub:
-  - pip-install
-  - internal/docker-push:
-      username: $DOCKER_USER
-      password: $DOCKER_PASS
-      repository: julzhk/getting-started-python
-      cmd: "python app_test.py"
-      ports: 5001  
+  # nothing here
+
