@@ -28,7 +28,7 @@ build:
         code: |
           python app_test.py
 
-deploy:
+dockerhub:
   steps:
     - internal/docker-push:
         username: $USERNAME
